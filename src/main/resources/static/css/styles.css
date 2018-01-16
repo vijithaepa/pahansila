@@ -1,0 +1,322 @@
+/*Common*/
+.contents {
+    margin-top: 59px;
+    background: url("../../img/IMG_001.jpg") repeat;
+}
+.pad-top-6 {padding-top: 6px;}
+.pad-top-10 {padding-top: 10px;}
+.pad-top-20 {padding-top: 20px;}
+.pad-top-30 {padding-top: 30px;}
+.pad-bottom-10 {padding-bottom: 10px;}
+.pad-bottom-20 {padding-bottom: 20px;}
+.pad-bottom-30 {padding-bottom: 30px;}
+.pad-10 {padding: 10px;}
+
+.color-default {background: #313131;}
+.color-primary {background: #33747a;}
+.color-red {background: #8b2626;}
+.color-blue {background: #43668c;}
+.color-light-green {background: #649f2b;}
+.color-green {background: #506D2F;}
+
+.color-light-red {background: #ca2129;}
+.color-blue-1 {background: #2f98cc;}
+.color-blue-2 {background: #2b8cbc;}
+.color-blue-3 {background: #20749d;}
+
+.navy-blue {background: #2f98cc;}
+.navy-blue {background: #2f98cc;}
+.navy-blue {background: #2f98cc;}
+
+/*.md-datepicker-button { width: 36px; }*/
+
+.ng-invalid.ng-dirty {
+    border-color: red;
+}
+
+.ng-valid.ng-dirty {
+    border-color: green;
+}
+
+.top-bar {
+    height: 5px;
+    background: #8b2626;
+    margin-bottom: 1px;
+}
+
+.navbar {
+    margin-bottom: 1px;
+    background-color: #2A2922;
+    /*background: url("../img/IMG_004.jpg");*/
+}
+
+.navbar li:hover {
+    background: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+li.login a{
+    background: #ca2129;
+    margin-bottom: -10px;
+    color: #ffffff !important;
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+li.login a:hover, .navbar-default .navbar-nav>li>a:hover{
+    background: #cccccc;
+}
+
+li.register a{
+    background: #20749d;
+    margin-bottom: -10px;
+    color: #ffffff !important;
+}
+
+li.register a:hover, .navbar-default .navbar-nav>li>a:hover{
+    background: #cccccc;
+
+}
+
+.label-header{
+    display:block;
+    padding: 5px 0;
+}
+
+/*Home page*/
+.carousel {
+    padding-bottom: 10px;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    /*height: 350px;*/
+    padding: 0px;
+}
+
+.jumbotron {
+    background: url("../img/IMG_0064.jpg") no-repeat 50% 0;
+    height: 350px;
+    padding: 0px;
+}
+
+.jumbotron [class*="col-"] {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+    overflow: auto;
+    height: 350px;
+}
+
+.jumbotron-content{
+    color: #ffffff;
+}
+
+.jumbotron h1 {
+    font-size: 34px;
+    border-bottom: #ffffff solid 1px;
+    padding-bottom: 10px;
+}
+
+
+.bluebox {
+    background: #2f98cc;
+    overflow: hidden;
+    height: 230px;
+    color: #ffffff;
+    padding:0 10px;
+    font-size: 120%;
+}
+
+.bluebox a.readmore {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    background: #2f98cc;
+    padding: 10px 15px;
+    color: #ffffff;
+}
+
+.bluebox a.readmore:hover {
+    color: #000;
+    background: #20749d;
+}
+
+.redbox {
+    background: #ca2129;
+    overflow: hidden;
+    height: 230px;
+    color: #ffffff;
+    padding:0 10px;
+    font-size: 120%;
+}
+
+.redbox a.readmore {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    background: #bf1e26;
+    padding: 10px 15px;
+    color: #ffffff;
+}
+
+.redbox a.readmore:hover {
+    color: #000;
+    background: #86161b;
+}
+
+.media {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.media-body {
+    font-size: 120%;
+}
+
+.panel-blue-heading {
+    background: #20749d !important;
+    color: #ffffff !important;
+}
+
+a.list-group-item.active, a.list-group-item.active:focus, a.list-group-item.active:hover {
+    background: #20749d;
+    border: #ca2129;;
+}
+
+.gray-list a.list-group-item.active, .gray-list a.list-group-item.active:focus, .gray-list a.list-group-item.active:hover {
+    background: #f4f4f4;
+    border: #cccccc;
+    color: #666666;
+}
+
+/*About Us*/
+.nav-pills>li{
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    font-weight: bolder;
+    /*border-radius: 5%;*/
+}
+
+#blog img{
+    width:100%;
+    margin:5px 0 15px 0;
+    border:1px #cccccc solid;
+    padding:3px;
+    border-radius:5px;
+}
+#report-event a.newItem{
+    /*background:#8b2626;*/
+    padding:10px 15px;
+    color:#ffffff;
+    text-align:center;
+    display:block;
+    margin:20px 0;
+    border-radius:5px;
+}
+
+#events-list span.glyphicon{
+    padding: 0 5px;
+}
+
+#blog a.readmore{
+    background:#2b8cbc;
+    padding:10px 15px;
+    color:#ffffff;
+    text-align:center;
+    display:block;
+    margin-top:20px !important;
+    border-radius:5px;
+}
+
+#blog a.readmore:hover{
+    background:#2b8cbc;
+}
+
+small{
+    padding:5px;
+    background:#f4f4f4;
+    border:#dddddd solid 1px;
+    border-radius:10px;
+    width:100%;
+    display:block;
+    margin:5px 0 10px 0;
+}
+
+iframe.gmap{
+    width:100%;
+    border:#cccccc 1px solid;
+    border-radius:10px;
+    padding:4px;
+}
+
+.greywell{
+    background:#f4f4f4 !important;
+}
+
+#tooltip_1,#tooltip_2{
+    color:#ffffff;
+    border-bottom:dotted 1px #ffffff;
+    padding-bottom:2px;
+}
+
+#tooltip_1:hover,#tooltip_2:hover{
+    text-decoration: none;
+}
+
+.tab-pane{
+    padding-top:10px;
+}
+
+.tab-content>.active {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    margin: 5px 5px;
+    border-radius: 4%;
+}
+.thumbnail>img {
+    padding:5px;
+}
+
+footer {
+    /*text-align: center;*/
+    padding: 20px 0;
+    font-weight: bold;
+    color: #f2f6f3;
+    background: #2A2922;
+    /*background: url("../img/IMG_006.jpg") repeat;*/
+}
+
+footer.media-links {
+    /*padding-right: 50px;*/
+}
+
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+.social:hover {
+    color: #80bfff;
+}
