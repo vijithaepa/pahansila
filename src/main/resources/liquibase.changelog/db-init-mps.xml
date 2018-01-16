@@ -1,0 +1,140 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="vepa (generated)" id="1506402636357-1">
+        <createTable tableName="activity">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="activity_date" type="datetime(6)"/>
+            <column name="activity_type" type="VARCHAR(255)"/>
+            <column name="expire_on" type="datetime(6)"/>
+            <column name="active" type="BIT(1)"/>
+            <column name="created_time" type="datetime(6)"/>
+            <column name="created_user_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-2">
+        <createTable tableName="contact_person">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="relationship_type" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-3">
+        <createTable tableName="hibernate_sequences">
+            <column name="sequence_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sequence_next_hi_value" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-4">
+        <createTable tableName="image">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="unique_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="entity" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-5">
+        <createTable tableName="member">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(512)"/>
+            <column name="address" type="VARCHAR(255)"/>
+            <column name="dob" type="datetime(6)"/>
+            <column name="gender" type="VARCHAR(255)"/>
+            <column name="deceased" type="BIT(1)"/>
+            <column name="location" type="VARCHAR(255)"/>
+            <column name="member_type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="contact_person" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-6">
+        <createTable tableName="user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="active" type="BIT(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password_hash" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-7">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="activity"/>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-8">
+        <addPrimaryKey columnNames="sequence_name" constraintName="PRIMARY" tableName="hibernate_sequences"/>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-9">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="member"/>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-10">
+        <addUniqueConstraint columnNames="email" constraintName="UK_a9uk66x3yl52turgbmec5j3n0" tableName="contact_person"/>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-11">
+        <addUniqueConstraint columnNames="email" constraintName="UK_ob8kqyqqgmefl0aco34akdtpe" tableName="user"/>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-12">
+        <createIndex indexName="FKhqc3jyyua6jt6vd7gwk6k92r2" tableName="member">
+            <column name="contact_person"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-13">
+        <createIndex indexName="FKss0ejfxdpxuomgbo6kejqcdqr" tableName="activity">
+            <column name="created_user_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-14">
+        <addForeignKeyConstraint baseColumnNames="contact_person" baseTableName="member" constraintName="FKhqc3jyyua6jt6vd7gwk6k92r2" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="contact_person"/>
+    </changeSet>
+    <changeSet author="vepa (generated)" id="1506402636357-15">
+        <addForeignKeyConstraint baseColumnNames="created_user_id" baseTableName="activity" constraintName="FKss0ejfxdpxuomgbo6kejqcdqr" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="user"/>
+    </changeSet>
+</databaseChangeLog>
